@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/wc20.10_explained.c
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netinet/ip.h
+-
+arpa/inet.h
+-
+stdio.h
+-
+stdint.h
+-
+errno.h
+-
+
