@@ -73,7 +73,9 @@ CMAKE_BINARY_DIR = "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Computer_Networks.dir/all
+all: CMakeFiles/HTTP1.1.dir/all
+all: CMakeFiles/HTTP1.0.dir/all
+all: CMakeFiles/Web_Server.dir/all
 
 .PHONY : all
 
@@ -83,36 +85,92 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Computer_Networks.dir/clean
+clean: CMakeFiles/HTTP1.1.dir/clean
+clean: CMakeFiles/HTTP1.0.dir/clean
+clean: CMakeFiles/Web_Server.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Computer_Networks.dir
+# Target rules for target CMakeFiles/HTTP1.1.dir
 
 # All Build rule for target.
-CMakeFiles/Computer_Networks.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Computer_Networks"
-.PHONY : CMakeFiles/Computer_Networks.dir/all
+CMakeFiles/HTTP1.1.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target HTTP1.1"
+.PHONY : CMakeFiles/HTTP1.1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Computer_Networks.dir/rule: cmake_check_build_system
+CMakeFiles/HTTP1.1.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Computer_Networks.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HTTP1.1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/Computer_Networks.dir/rule
+.PHONY : CMakeFiles/HTTP1.1.dir/rule
 
 # Convenience name for target.
-Computer_Networks: CMakeFiles/Computer_Networks.dir/rule
+HTTP1.1: CMakeFiles/HTTP1.1.dir/rule
 
-.PHONY : Computer_Networks
+.PHONY : HTTP1.1
 
 # clean rule for target.
-CMakeFiles/Computer_Networks.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/clean
-.PHONY : CMakeFiles/Computer_Networks.dir/clean
+CMakeFiles/HTTP1.1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/clean
+.PHONY : CMakeFiles/HTTP1.1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/HTTP1.0.dir
+
+# All Build rule for target.
+CMakeFiles/HTTP1.0.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target HTTP1.0"
+.PHONY : CMakeFiles/HTTP1.0.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/HTTP1.0.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HTTP1.0.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/HTTP1.0.dir/rule
+
+# Convenience name for target.
+HTTP1.0: CMakeFiles/HTTP1.0.dir/rule
+
+.PHONY : HTTP1.0
+
+# clean rule for target.
+CMakeFiles/HTTP1.0.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/clean
+.PHONY : CMakeFiles/HTTP1.0.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Web_Server.dir
+
+# All Build rule for target.
+CMakeFiles/Web_Server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target Web_Server"
+.PHONY : CMakeFiles/Web_Server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Web_Server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Web_Server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/Web_Server.dir/rule
+
+# Convenience name for target.
+Web_Server: CMakeFiles/Web_Server.dir/rule
+
+.PHONY : Web_Server
+
+# clean rule for target.
+CMakeFiles/Web_Server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/clean
+.PHONY : CMakeFiles/Web_Server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

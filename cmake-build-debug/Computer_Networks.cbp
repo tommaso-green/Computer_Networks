@@ -27,6 +27,86 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="HTTP1.1">
+				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/HTTP1.1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 HTTP1.1"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HTTP1.1/fast">
+				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/HTTP1.1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 HTTP1.1/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HTTP1.0">
+				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/HTTP1.0" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 HTTP1.0"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HTTP1.0/fast">
+				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/HTTP1.0" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 HTTP1.0/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
 				<Option type="4"/>
@@ -37,8 +117,8 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Computer_Networks">
-				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/Computer_Networks" prefix_auto="0" extension_auto="0"/>
+			<Target title="Web_Server">
+				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/Web_Server" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -51,14 +131,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 Computer_Networks"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 Web_Server"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Computer_Networks/fast">
-				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/Computer_Networks" prefix_auto="0" extension_auto="0"/>
+			<Target title="Web_Server/fast">
+				<Option output="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/Web_Server" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -71,7 +151,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 Computer_Networks/fast"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 Web_Server/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/mnt/c/Users/tomma/Coding/CProjects/Computer\ Networks/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -79,7 +159,13 @@
 			</Target>
 		</Build>
 		<Unit filename="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/wc20.10_explained.c">
-			<Option target="Computer_Networks"/>
+			<Option target="HTTP1.0"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/wc20.11_explained.c">
+			<Option target="HTTP1.1"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/ws20_explained.c">
+			<Option target="Web_Server"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

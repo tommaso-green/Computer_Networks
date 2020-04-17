@@ -131,17 +131,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Computer_Networks
+# Target rules for targets named HTTP1.1
 
 # Build rule for target.
-Computer_Networks: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Computer_Networks
-.PHONY : Computer_Networks
+HTTP1.1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTTP1.1
+.PHONY : HTTP1.1
 
 # fast build rule for target.
-Computer_Networks/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/build
-.PHONY : Computer_Networks/fast
+HTTP1.1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/build
+.PHONY : HTTP1.1/fast
+
+#=============================================================================
+# Target rules for targets named HTTP1.0
+
+# Build rule for target.
+HTTP1.0: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HTTP1.0
+.PHONY : HTTP1.0
+
+# fast build rule for target.
+HTTP1.0/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/build
+.PHONY : HTTP1.0/fast
+
+#=============================================================================
+# Target rules for targets named Web_Server
+
+# Build rule for target.
+Web_Server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Web_Server
+.PHONY : Web_Server
+
+# fast build rule for target.
+Web_Server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/build
+.PHONY : Web_Server/fast
 
 wc20.10_explained.o: wc20.10_explained.c.o
 
@@ -149,7 +175,7 @@ wc20.10_explained.o: wc20.10_explained.c.o
 
 # target to build an object file
 wc20.10_explained.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/wc20.10_explained.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/wc20.10_explained.c.o
 .PHONY : wc20.10_explained.c.o
 
 wc20.10_explained.i: wc20.10_explained.c.i
@@ -158,7 +184,7 @@ wc20.10_explained.i: wc20.10_explained.c.i
 
 # target to preprocess a source file
 wc20.10_explained.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/wc20.10_explained.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/wc20.10_explained.c.i
 .PHONY : wc20.10_explained.c.i
 
 wc20.10_explained.s: wc20.10_explained.c.s
@@ -167,8 +193,62 @@ wc20.10_explained.s: wc20.10_explained.c.s
 
 # target to generate assembly for a file
 wc20.10_explained.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Computer_Networks.dir/build.make CMakeFiles/Computer_Networks.dir/wc20.10_explained.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.0.dir/build.make CMakeFiles/HTTP1.0.dir/wc20.10_explained.c.s
 .PHONY : wc20.10_explained.c.s
+
+wc20.11_explained.o: wc20.11_explained.c.o
+
+.PHONY : wc20.11_explained.o
+
+# target to build an object file
+wc20.11_explained.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/wc20.11_explained.c.o
+.PHONY : wc20.11_explained.c.o
+
+wc20.11_explained.i: wc20.11_explained.c.i
+
+.PHONY : wc20.11_explained.i
+
+# target to preprocess a source file
+wc20.11_explained.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/wc20.11_explained.c.i
+.PHONY : wc20.11_explained.c.i
+
+wc20.11_explained.s: wc20.11_explained.c.s
+
+.PHONY : wc20.11_explained.s
+
+# target to generate assembly for a file
+wc20.11_explained.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HTTP1.1.dir/build.make CMakeFiles/HTTP1.1.dir/wc20.11_explained.c.s
+.PHONY : wc20.11_explained.c.s
+
+ws20_explained.o: ws20_explained.c.o
+
+.PHONY : ws20_explained.o
+
+# target to build an object file
+ws20_explained.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/ws20_explained.c.o
+.PHONY : ws20_explained.c.o
+
+ws20_explained.i: ws20_explained.c.i
+
+.PHONY : ws20_explained.i
+
+# target to preprocess a source file
+ws20_explained.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/ws20_explained.c.i
+.PHONY : ws20_explained.c.i
+
+ws20_explained.s: ws20_explained.c.s
+
+.PHONY : ws20_explained.s
+
+# target to generate assembly for a file
+ws20_explained.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Web_Server.dir/build.make CMakeFiles/Web_Server.dir/ws20_explained.c.s
+.PHONY : ws20_explained.c.s
 
 # Help Target
 help:
@@ -178,10 +258,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Computer_Networks"
+	@echo "... HTTP1.0"
+	@echo "... HTTP1.1"
+	@echo "... Web_Server"
 	@echo "... wc20.10_explained.o"
 	@echo "... wc20.10_explained.i"
 	@echo "... wc20.10_explained.s"
+	@echo "... wc20.11_explained.o"
+	@echo "... wc20.11_explained.i"
+	@echo "... wc20.11_explained.s"
+	@echo "... ws20_explained.o"
+	@echo "... ws20_explained.i"
+	@echo "... ws20_explained.s"
 .PHONY : help
 
 

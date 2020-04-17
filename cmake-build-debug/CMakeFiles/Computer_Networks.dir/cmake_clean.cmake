@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Computer_Networks.dir/wc20.10_explained.c.o"
+  "CMakeFiles/Computer_Networks.dir/wc20.11.c.o"
   "Computer_Networks"
   "Computer_Networks.pdb"
 )

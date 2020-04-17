@@ -1,3 +1,5 @@
 /mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/HTTP1.1.dir
+/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/HTTP1.0.dir
 /mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/Computer_Networks.dir
+/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/Web_Server.dir

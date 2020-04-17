@@ -44,5 +44,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Computer_Networks.dir/DependInfo.cmake"
+  "CMakeFiles/HTTP1.1.dir/DependInfo.cmake"
+  "CMakeFiles/HTTP1.0.dir/DependInfo.cmake"
+  "CMakeFiles/Web_Server.dir/DependInfo.cmake"
   )

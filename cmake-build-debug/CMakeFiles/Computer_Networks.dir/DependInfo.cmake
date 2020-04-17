@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/wc20.10_explained.c" "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/Computer_Networks.dir/wc20.10_explained.c.o"
+  "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/wc20.11.c" "/mnt/c/Users/tomma/Coding/CProjects/Computer Networks/cmake-build-debug/CMakeFiles/Computer_Networks.dir/wc20.11.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -3,4 +3,6 @@ project(Computer_Networks C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Computer_Networks wc20.10_explained.c)
+add_executable(HTTP1.0 wc20.10_explained.c)
+add_executable(HTTP1.1 wc20.11_explained.c)
+add_executable(Web_Server ws20_explained.c)
