@@ -175,6 +175,19 @@ Web_Proxy/fast:
 	$(MAKE) -f CMakeFiles/Web_Proxy.dir/build.make CMakeFiles/Web_Proxy.dir/build
 .PHONY : Web_Proxy/fast
 
+#=============================================================================
+# Target rules for targets named Printing
+
+# Build rule for target.
+Printing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Printing
+.PHONY : Printing
+
+# fast build rule for target.
+Printing/fast:
+	$(MAKE) -f CMakeFiles/Printing.dir/build.make CMakeFiles/Printing.dir/build
+.PHONY : Printing/fast
+
 ping20_explained.o: ping20_explained.c.o
 
 .PHONY : ping20_explained.o
@@ -201,6 +214,33 @@ ping20_explained.s: ping20_explained.c.s
 ping20_explained.c.s:
 	$(MAKE) -f CMakeFiles/Ping.dir/build.make CMakeFiles/Ping.dir/ping20_explained.c.s
 .PHONY : ping20_explained.c.s
+
+printing_functions.o: printing_functions.c.o
+
+.PHONY : printing_functions.o
+
+# target to build an object file
+printing_functions.c.o:
+	$(MAKE) -f CMakeFiles/Printing.dir/build.make CMakeFiles/Printing.dir/printing_functions.c.o
+.PHONY : printing_functions.c.o
+
+printing_functions.i: printing_functions.c.i
+
+.PHONY : printing_functions.i
+
+# target to preprocess a source file
+printing_functions.c.i:
+	$(MAKE) -f CMakeFiles/Printing.dir/build.make CMakeFiles/Printing.dir/printing_functions.c.i
+.PHONY : printing_functions.c.i
+
+printing_functions.s: printing_functions.c.s
+
+.PHONY : printing_functions.s
+
+# target to generate assembly for a file
+printing_functions.c.s:
+	$(MAKE) -f CMakeFiles/Printing.dir/build.make CMakeFiles/Printing.dir/printing_functions.c.s
+.PHONY : printing_functions.c.s
 
 wc20.10_explained.o: wc20.10_explained.c.o
 
@@ -317,15 +357,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... HTTP1.1"
 	@echo "... Ping"
 	@echo "... Web_Server"
 	@echo "... HTTP1.0"
 	@echo "... Web_Proxy"
-	@echo "... edit_cache"
+	@echo "... Printing"
 	@echo "... ping20_explained.o"
 	@echo "... ping20_explained.i"
 	@echo "... ping20_explained.s"
+	@echo "... printing_functions.o"
+	@echo "... printing_functions.i"
+	@echo "... printing_functions.s"
 	@echo "... wc20.10_explained.o"
 	@echo "... wc20.10_explained.i"
 	@echo "... wc20.10_explained.s"
