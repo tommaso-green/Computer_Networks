@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/Computer_Networks.dir/wc20.11.c.o  -o Computer_Networks 

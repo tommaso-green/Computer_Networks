@@ -150,7 +150,7 @@ int main() {
           left to read it will cause the while loop to cease.
 
           Our objective is to read the headers and store them inside the struct headers h (which will be an array of
-        headers) defined in the static area of the program. h will contain all the headers, with their name in the
+          headers) defined in the static area of the program. h will contain all the headers, with their name in the
           h[k].n field and value in the h[k].v field.
 
           The first header h[0] will contain the status line and value equal to 0.
@@ -176,12 +176,14 @@ int main() {
         if ((response[j] == '\n') &&
             (response[j - 1] == '\r')) { //if I find a CRLF, it's time to change the header considered
             response[j - 1] = 0; // Let's put a string terminator at the end of response
-            if (h[k].n[0] == 0) break; // if I reached the last CRLF
+            if (h[k].n[0] == 0)
+                break; // if I reached the last CRLF. This is the sequence: /r/n/r/n--> 0/n/r/n---> 0/n0/n
             h[++k].n = response + j +
                        1; //let's increase k and make h[k] to point to the new location where data will be written
         }
 
-        if (response[j] == ':' && (h[k].v == 0)) { //If I'm reading a : I'm about to read the header value
+        if (response[j] == ':' &&
+            (h[k].v == 0)) { //If I'm reading a : I'm about to read the header value, example Connection: close
             response[j] = 0; // String terminator
             h[k].v = response + j + 1; // As above
         }
@@ -191,15 +193,15 @@ int main() {
 
     printf("Status line: %s\n", h[0].n);
 
-/*
-   Now let's ready the entity body (if there is any).
+    /*
+     Now let's ready the entity body (if there is any).
 	 To know its length we have to inspect the "Content-Length"
 	 field.
 
 	 For academic reasons, let's also print all the headers.
 
 	 Then we'll read and print the entity body.
-*/
+    */
 
     for (i = 1; h[i].n[0]; i++) {
 
@@ -215,7 +217,7 @@ int main() {
     else
         for (size = 0; (t = read(s, response + size, 1000000 - size)) > 0; size = size + t);
 
-    if (t == -1) { // t is -1 if an error occured
+    if (t == -1) { // t is -1 if an error occurred
         perror("Read failed");
         return 1;
     }

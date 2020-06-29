@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" autoUpload="On explicit save action" persistUploadOnCheckin="false" autoUploadExternalChanges="true">
     <serverData>
+      <paths name="Computer Networks Cloud">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Ubuntu (2bfdb204-f787-4661-a859-d2dbc32336de)">
         <serverdata>
           <mappings>
@@ -9,7 +16,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="WSL (a32c7fbf-f73c-4766-97ee-66e4f8a17dc4)">
+      <paths name="Ubuntu (686c2d6b-6e4c-4bb3-af36-c2fc670e16bd)">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -17,5 +24,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
   </component>
 </project>
