@@ -139,7 +139,7 @@ int main() {
             scheme = path;
             for (i = 0; path[i] != ':'; i++);
             path[i] = 0;
-            host = path + i + 3; // www.google.com
+            host = path + i + 3; // http://www.google.com, with +3 we can jump to www.google.com
             for (i = i + 3; path[i] != '/'; i++);
             path[i] = 0;
             resource = path + i + 1; // path
@@ -159,6 +159,7 @@ int main() {
             printf("Server address = %u.%u.%u.%u\n", (unsigned char) he->h_addr[0], (unsigned char) he->h_addr[1],
                    (unsigned char) he->h_addr[2], (unsigned char) he->h_addr[3]);
             s3 = socket(AF_INET, SOCK_STREAM, 0); //protocol=0 means it's chosen automatically
+            // this socket s3 will be used for the connection proxy-server
             if (s3 == -1) {
                 perror("Socket to server failed");
                 return 1;
@@ -175,12 +176,12 @@ int main() {
             // Now we forward the client's request to the server using the host we previously found
             sprintf(request2, "GET /%s HTTP/1.1\r\nHost:%s\r\nConnection:close\r\n\r\n", resource, host);
             write(s3, request2, strlen(request2));
-            while (t = read(s3, response2, 2000)) //as you get the required resource from server
+            while ((t = read(s3, response2, 2000))) //as you get the required resource from server
                 write(s2, response2, t); //stream it back to client
             shutdown(s3, SHUT_RDWR);
             close(s3);
-        } else if (!strcmp("CONNECT", method)) { // if it is a connect
-            host = path;
+        } else if (!strcmp("CONNECT", method)) { // if it is a connect, this program will act as a TUNNEL
+            host = path; // we want to extract info from CONNECT server.example.com:80 HTTP/1.1
             for (i = 0; path[i] != ':'; i++); //until you found the :
             path[i] = 0;
             port = path + i + 1;
@@ -209,7 +210,7 @@ int main() {
             }
             // ===============> Bug : missing the HTTP response for successful connection
             sprintf(response, "HTTP/1.1 200 Established\r\n\r\n");
-            write(s2, response, strlen(response));
+            write(s2, response, strlen(response)); // telling the client that the proxy connected to server
             // <==============
             if (!(pid = fork())) { //Child
                 while ((t = read(s2, request2, 2000))) { //Reading from socket attached to client

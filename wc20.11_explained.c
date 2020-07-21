@@ -42,7 +42,7 @@ int main() {
     }
     sprintf(request,
             "GET /  HTTP/1.1\r\nHost:www.google.it\r\n\r\n"); // request[0]='G', request[1]='E',... request[7]=0 (or '\0')
-    for (size = 0; request[size]; size++);
+    for (size = 0; request[size]; size++);    //Specifying Host is mandatory in HTTP 1.1
     t = write(s, request, size);
     if (t == -1) {
         perror("Write failed");

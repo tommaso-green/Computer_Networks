@@ -183,7 +183,7 @@ int main() {
         }
 
         if (response[j] == ':' &&
-            (h[k].v == 0)) { //If I'm reading a : I'm about to read the header value, example Connection: close
+            (h[k].v == 0)) { //If I'm reading a : I'm about to read the header value, e.g. Connection: close
             response[j] = 0; // String terminator
             h[k].v = response + j + 1; // As above
         }

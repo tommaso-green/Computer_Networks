@@ -91,7 +91,8 @@ int main() {
             perror("Accept Failed\n");
             return 1;
         }
-        if (!fork()) {
+        if (!fork()) { //<< MULTI PROCESS HANDLING: in the parent program, it will keep looping every time it creates a child
+            // the child will go on with the rest of the code, since fork() outputs 0.
             n = read(s2, request, 1999);
             request[n] = 0;
             printf("%s", request);
@@ -110,10 +111,10 @@ int main() {
                 sprintf(response, "HTTP/1.1 501 Not Implemented\r\n\r\n"); //We haven't implemented anything else
             else { // it is a get
                 if (!strncmp(path, "/cgi-bin/", 9)) { // CGI interface
-                    sprintf(command, "%s > results.txt", path + 9);
+                    sprintf(command, "%s > results.txt", path + 9); //parsing command, e.g. "ls"
                     printf("executing %s\n", command);
-                    system(command);
-                    if ((f = fopen("results.txt", "r")) == NULL) {
+                    system(command); //execution of command
+                    if ((f = fopen("results.txt", "r")) == NULL) { //if results not present
                         printf("cgi bin error\n");
                         return 1;
                     }

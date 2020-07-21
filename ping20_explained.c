@@ -49,8 +49,9 @@ struct arp_packet {
 
 struct ip_datagram {
     unsigned char ver_ihl; //First 4 bits it's version (4 for IPv4, 6 for IPv6) and
-    // last 4 bits it's Internet Header Length which can vary between 20 and 60. To get it just
-    // ver_ihl & 0xFF
+    // last 4 bits it's Internet Header Length which can vary between 20 and 60.
+    // To get first 4 bits: ver_ihl & 0xF0
+    // To get last 4 bits: (ver_ihl & 0x0F) >> 4
     unsigned char tos; //eight bits to specify precedence, delay, throughput, reliability. last two bits unused
     unsigned short len; // Entire datagram size = header_len+payload
     unsigned short id; // identifier for this datagram
@@ -91,7 +92,7 @@ int forge_ip(struct ip_datagram *ip, unsigned char *dst, int payloadlen, unsigne
     /* Calculate the checksum!!!*/
 };
 
-struct icmp_packet { //Actually this is the structure for an echo request/reply
+struct icmp_packet { //Actually this is the structure for an echo request/reply, not a general ICMP
     unsigned char type; // Macrocategory of message type
     unsigned char code; //Specification of message type
     unsigned short checksum;
@@ -134,14 +135,14 @@ int arp_resolve(unsigned char *destip, unsigned char *destmac) {
     for (i = 0; i < 4; i++) arp->dstip[i] = destip[i];
     sll.sll_family = AF_PACKET;
     sll.sll_ifindex = if_nametoindex(
-            "wifi0"); //interface index of the interface, which is found using the if_.. function
+            "eth0"); //interface index of the interface, which is found using the ifconfig function
     len = sizeof(sll);
     n = sendto(s, pkt, 14 + sizeof(struct arp_packet), 0, (struct sockaddr *) &sll, len); //14 is ethernet header size
     if (n == -1) {
         perror("Recvfrom failed");
         return 0;
     }
-    while (1) {
+    while (1) { //Listening to incoming packets
         n = recvfrom(s, pkt, 1500, 0, (struct sockaddr *) &sll, &len);
         if (n == -1) {
             perror("Recvfrom failed");
@@ -175,7 +176,7 @@ int main() {
 
     /**** HOST ROUTING ****/
     if (((*(unsigned int *) &myip) & (*(unsigned int *) &netmask)) ==
-        (*(unsigned int *) &targetip) & (*(unsigned int *) &netmask))
+        ((*(unsigned int *) &targetip) & (*(unsigned int *) &netmask)))
         arp_resolve(targetip, dstmac); // if host and target in the same network (same net bytes)
         //send it to target ip
     else
@@ -202,7 +203,7 @@ int main() {
         ((char *) &sll)[i] = 0; // emptying sll
 
     sll.sll_family = AF_PACKET;
-    sll.sll_ifindex = if_nametoindex("wifi0");
+    sll.sll_ifindex = if_nametoindex("eth0");
     len = sizeof(sll);
     n = sendto(s, packet, 14 + 20 + 8 + 20, 0, (struct sockaddr *) &sll, len); // Send Echo Request
     if (n == -1) {

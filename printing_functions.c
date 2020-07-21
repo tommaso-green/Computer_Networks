@@ -61,12 +61,12 @@ void arp_print(struct arp_packet *a) {
     printf("Hardware Addr len: %d\n", a->hlen);
     printf("Protocol Addr len: %d\n", a->plen);
     printf("Operation: %d\n", htons(a->op));
-    printf("HW Addr sorgente: %x:%x:%x:%x:%x:%x\n", a->srcmac[0], a->srcmac[1], a->srcmac[2], a->srcmac[3],
+    printf("HW Addr Source: %x:%x:%x:%x:%x:%x\n", a->srcmac[0], a->srcmac[1], a->srcmac[2], a->srcmac[3],
            a->srcmac[4], a->srcmac[5]);
     printf("IP Source: %d.%d.%d.%d\n", a->srcip[0], a->srcip[1], a->srcip[2], a->srcip[3]);
-    printf("HW Addr Destinazione: %x:%x:%x:%x:%x:%x\n", a->dstmac[0], a->dstmac[1], a->dstmac[2], a->dstmac[3],
+    printf("HW Addr Destination: %x:%x:%x:%x:%x:%x\n", a->dstmac[0], a->dstmac[1], a->dstmac[2], a->dstmac[3],
            a->dstmac[4], a->dstmac[5]);
-    printf("IP Dest: %d.%d.%d.%d\n", a->dstip[0], a->dstip[1], a->dstip[2], a->dstip[3]);
+    printf("IP Destination: %d.%d.%d.%d\n", a->dstip[0], a->dstip[1], a->dstip[2], a->dstip[3]);
 }
 
 void ip_print(struct ip_datagram *i) {
@@ -75,7 +75,7 @@ void ip_print(struct ip_datagram *i) {
     unsigned int opt_len = ihl - 20;
 
     printf("\n\n ***** IP Packet *****\n");
-    printf("Version: %d\n", i->ver_ihl & 0xF0);
+    printf("Version: %d\n", ((i->ver_ihl) & 0xF0) >> 4);
     printf("IHL (bytes 60max): %d\n", ihl);
     printf("TOS: %d\n", i->tos);
     printf("Lunghezza totale: %d\n", totlen);
@@ -106,7 +106,7 @@ void icmp_print(struct icmp_packet *i) {
     printf("\n\n ***** ICMP Packet *****\n");
     printf("Type: %d\n", i->type);
     printf("Code: %d\n", i->code);
-    printf("Code: 0x%x\n", htons(i->checksum));
+    printf("Checksum: 0x%x\n", htons(i->checksum));
     printf("ID: %d\n", htons(i->id));
     printf("Sequence: %d\n", htons(i->seq));
 }
